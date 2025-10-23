@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Henry's MainPage!</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        background: linear-gradient(90deg, #a00000, orange, yellow);
+      }
+      p.difficulties {
+        white-space: pre-line;
+        color: #ffffff;
+        line-height: 1.6;
+      }
+      p.REBIRTHS {
+        white-space: pre-line;
+        color: #e8b80c;
+        line-height: 1.6;
+      }
+      p[class="THE FINAL 10"] {
+        white-space: pre-line;
+        color: #ff0000;
+        line-height: 1.6;
+      }
+      p[class="THE FINAL DIFFICULTY OF ALL"] {
+        white-space: pre-line;
+        font-weight: bold;
+        font-family: Courier, sans-serif;
+        background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-stroke: 0.5px black;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to my MainPage!</h1>
+    <h2>ABOUT ME (don't spoil this or else I'LL TELL GITHUB TO GET YOUR ACCOUNT BANNED BECAUSE YOU SPOILED MY INFORMATION):</h2>
+    <p id="aboutMe"></p>
+
+    <h2>MY AWESUM DIFFICULTY CHART:</h2>
+    <p class="difficulties">
+      THE FIRST DIFFICULTY
+      THE LOWEREST GAP
+      THE LOWERER GAP
+      THE LOWER GAP
+      Exist-To-Win
+      EFFORTLESSLESSEST
+      EFFORTLESSLESSER
+      EFFORTLESSLESS
+      EFFORTLESSEST
+      EFFORTLESSER
+      EFFORTLESS
+      Piece-Of-Cake
+      Easiest
+      Easier
+      Easy
+      Kind-Of-Easy
+      Reversed-Kind-Of-Medium
+      Medium
+      Kind-Of-Medium
+      Reversed-Kind-Of-Hard
+      Hard
+      Kind-Of-Hard
+      Reversed-Kind-Of-Insane
+      Insane
+      Kind-Of-Insane
+      Reversed-Kind-Of-Extreme
+      Extreme
+      Kind-Of-Extreme
+      Reversed-Kind-Of-The-Human-Limit
+      The-Human-Limit
+      The 1st Impossible
+      The 2nd Impossible
+      The 3rd Impossible
+      The 4th Impossible
+      The 5th Impossible
+      The True Impossible
+      The Penpenpenpenpenultimate
+      The Penpenpenpenultimate
+      The Penpenpenultimate
+      The Penpenultimate
+      THE PENULTIMATE
+    </p>
+
+    <h3>CHOOSE BETWEEN TWO PATHS:</h3>
+    <h4>THE REBIRTHS:</h4>
+    <p class="REBIRTHS">
+      Rebirth I
+      Rebirth II
+      Rebirth III
+      Rebirth IV
+      Rebirth V
+      Rebirth VI
+      Rebirth VII
+      Rebirth VIII
+      Rebirth IX
+      Rebirth X
+    </p>
+
+    <h4>THE 10 FINALISTS:</h4>
+    <p class="THE FINAL 10">
+      Infinity
+      Omega
+      Epsilon
+      Zeta
+      Feferman-Schütte
+      Bachmann-Howard
+      Buchholz
+      Extended-Buchholz
+      THE UPPER GAP
+    </p>
+
+    <p>Prepare for it... the final of the chart.</p>
+    <p class="THE FINAL DIFFICULTY OF ALL">
+      THE FINAL DIFFICULTY!!!
+    </p>
+
+    <h6>(Inspired by JJT. Sadly, no Babasses, no Primordials, no Etherals, nothing of that.)</h6>
+
+    <script>
+      // Array to map month numbers to names
+      const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      // Your birthday
+      const birthday = new Date(2017, 5, 21); // June 21, 2017
+
+      // Today
+      const today = new Date();
+
+      // Difference in milliseconds
+      const diffMs = today - birthday;
+
+      // Convert to days
+      const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+      // Convert to years (adjust if birthday hasn't happened yet this year)
+      let diffYears = today.getFullYear() - birthday.getFullYear();
+      if (
+        today.getMonth() < birthday.getMonth() ||
+        (today.getMonth() === birthday.getMonth() && today.getDate() < birthday.getDate())
+      ) {
+        diffYears--;
+      }
+
+      // Month name
+      const month = monthNames[birthday.getMonth()];
+
+      // Inject into HTML
+      document.getElementById("aboutMe").textContent =
+        `I'm an ${diffYears}-year-old, I'm Brazilian and I was born on June 21, 2017 (and 2017 is a PRIME NUMBER!).`;
+    </script>
+  </body>
+</html>
